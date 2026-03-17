@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family:
+    "Archivo Black", "Great Vibes", "Inter", "Bebas Neue", "Playfair Display",
+    sans-serif;
+  background-color: #fffbf6;
+  color: black;
+  line-height: 1.8;
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ul {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  margin-top: 1.5rem;
+  gap: 2rem;
+}
+
+ul a {
+  margin-left: 1rem;
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.Logo {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.logo-tekst {
+  text-decoration: none;
+  color: black;
+  font-size: 20px;
+}
+
+.hero-tekst {
+  text-align: center;
+}
+
+.titel {
+  font-family: "Archivo Black", sans-serif;
+  font-size: 64px;
+  font-weight: bold;
+  color: #398f00;
+  margin-bottom: -30px;
+}
+
+.sub-titel {
+  font-family: "Great Vibes", sans-serif;
+  font-size: 32px;
+  color: #398f00;
+}
+
+.hero-billede img {
+  justify-content: center;
+  width: 100%;
+  height: auto;
+  margin: 0.5rem 0;
+  padding: 0 20px;
+}
+
+.grid-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 23px;
+  text-align: center;
+  padding: 20px 0;
+  border: 1px solid black;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.card p {
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #398f00;
+  text-align: center;
+  margin: 5px 0;
+}
+
+@media (min-width: 768px) {
+  main {
+    margin: 0;
+    padding: 2rem;
+  }
+
+  .logo-tekst {
+    font-size: 64px;
+    line-height: 1;
+  }
+
+  .titel {
+    font-size: 200px;
+    line-height: 1;
+    margin-top: 10px;
+    margin-bottom: 0px;
+  }
+
+  .sub-titel {
+    font-size: 64px;
+  }
+
+  .hero-billede img {
+    justify-content: center;
+    width: 100%;
+    height: auto;
+    margin: 0.5rem 0;
+    padding: 0 70px;
+  }
+
+  .grid-cards {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+    padding: 0 70px;
+  }
+
+  .card {
+    background-color: white;
+    border-radius: 23px;
+    text-align: center;
+    padding: 20px 0;
+    border: 1px solid black;
+    margin: 3rem 0;
+  }
+
+  .card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+
+  .card p {
+    font-size: 24px;
+  }
+
+  .Logo {
+    margin-top: 1rem;
+    margin-bottom: 0rem;
+  }
+}
