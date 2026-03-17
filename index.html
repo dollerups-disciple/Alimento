@@ -1,26 +1,106 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!doctype html>
+<html lang="da">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Alimento</title>
-</head>
-<body>
-    <nav></nav>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <div>
-        <h1>Alimento</h1>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Montserrat:wght@400;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="CSS/Index.css" />
+  </head>
+  <body>
+    <main class="app">
+      <header class="top">
+        <div class="icon">
+          <svg viewBox="0 0 24 24">
+            <path d="M6 9l6-7 6 7"></path>
+            <path d="M3 9h18l-2 11H5L3 9z"></path>
+          </svg>
+        </div>
+
+        <nav class="menu">
+          <a href="veggie.html">Veggie</a>
+          <a href="french.html">French</a>
+          <a href="asian.html">Asian</a>
+        </nav>
+
+        <div class="icon">⌕</div>
+      </header>
+
+      <section class="hero">
+        <h1>ALIMENTO</h1>
         <h2>Where taste matters</h2>
-        <img src="" alt="">
-    </div>
-    <div>
-        <h2>categories
-        </h2>
-    </div>
-</body>
+        <img
+          src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+          alt="mad"
+        />
+      </section>
+
+      <section>
+        <h3>CATEGORIES <span>↓</span></h3>
+
+        <div class="cats">
+          <a href="veggie.html">
+            <article>
+              <div class="circle green">🌱</div>
+              <p>VEGGIE</p>
+            </article>
+          </a>
+
+          <a href="french.html">
+            <article>
+              <div class="circle blue">🥐</div>
+              <p>FRENCH</p>
+            </article>
+          </a>
+
+          <a href="asian.html">
+            <article>
+              <div class="circle red">🍜</div>
+              <p>ASIAN</p>
+            </article>
+          </a>
+        </div>
+      </section>
+
+      <section>
+        <h3>MOST POPULAR</h3>
+        <div class="cards">
+          <a href="veggie.html">
+            <article class="card">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+                alt="ret"
+              />
+              <p>Veggie - Greeny</p>
+            </article>
+          </a>
+          <a href="french.html">
+            <article class="card">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+                alt="ret"
+              />
+              <p>French - Le Belle</p>
+            </article>
+          </a>
+          <a href="asian.html">
+            <article class="card">
+              <img
+                src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1200&q=80"
+                alt="ret"
+              />
+              <p>Asian - SUTAKA</p>
+            </article>
+          </a>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
