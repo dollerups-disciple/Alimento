@@ -140,6 +140,94 @@ h3 span {
   font-weight: 400;
 }
 
+/* Container til knapper og dropdown */
+.controls {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  padding: 20px 0;
+  flex-wrap: wrap;
+}
+
+/* De enkelte filter-knapper */
+.filter-btn {
+  background-color: #f0f0f0;
+  border: 1px solid #ccc;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+/* Når man holder musen over knapperne (Hover) */
+.filter-btn:hover {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
+}
+
+/* Selve dropdown-menuen */
+#price-sort {
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  font-family: "Montserrat", sans-serif;
+  cursor: pointer;
+}
+
+.suggestion-box {
+  margin-top: 40px;
+  padding: 20px;
+  background: #f0f0f0;
+  text-align: center;
+  font-family: sans-serif; /* Eller jeres Montserrat */
+}
+
+.suggestion-box p {
+  margin-bottom: 20px;
+}
+
+#product-suggestion {
+  display: flex;
+  flex-direction: column; /* Stabel på mobil */
+  gap: 15px;
+  max-width: 100%; /* Fyld bredden på mobil */
+  margin: 0 auto;
+}
+
+/* Container for label + input */
+.form-group {
+  display: flex;
+  flex-direction: column; /* Label over input på mobil */
+  gap: 5px;
+  text-align: left;
+}
+
+#product-suggestion label {
+  font-weight: bold;
+}
+
+#product-suggestion input,
+#product-suggestion select {
+  padding: 12px;
+  border: 1px solid #333;
+  width: 100%; /* Inputs fylder gruppen */
+  box-sizing: border-box; /* Vigtigt for padding */
+}
+
+/* KNAPPEN PÅ MOBIL */
+#product-suggestion button {
+  background: #000;
+  color: #fff;
+  padding: 15px;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100%; /* Fuld bredde på mobil er fint */
+}
+
 @media (max-width: 600px) {
   .cards {
     display: grid;
@@ -195,5 +283,35 @@ h3 span {
   h3 {
     font-size: 24px;
     margin: 30px 0 20px;
+  }
+  .controls {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form-group {
+    flex-direction: row; /* På linje! */
+    align-items: center; /* Centreret vertikalt */
+    justify-content: flex-end; /* Skub mod højre */
+  }
+
+  /* Fast bredde til labels så inputs flugter */
+  #product-suggestion label {
+    width: 120px; /* Juster denne hvis nødvendigt */
+    margin-right: 15px;
+    text-align: right;
+  }
+
+  /* Inputs får fast bredde så de flugter */
+  #product-suggestion input,
+  #product-suggestion select {
+    width: 300px; /* Juster denne */
+  }
+
+  /* KNAPPEN PÅ DESKTOP (Fixer "for lang") */
+  #product-suggestion button {
+    width: auto; /* Ikke 100% */
+    padding: 12px 30px; /* Lidt smallere */
+    align-self: flex-end; /* Skub helt til højre foran inputs */
+    margin-right: 0;
   }
 }

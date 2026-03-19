@@ -15,7 +15,7 @@ Sitet består af flere sider, hvor brugeren kan:
 ## Links
 
 - GitHub repository: [https://github.com/dollerups-disciple/Alimento]
-- GitHub Pages: [https://github.com/dollerups-disciple/Alimento/settings/pages]
+- GitHub Pages: [https://dollerups-disciple.github.io/Alimento/]
 - Figma: [https://www.figma.com/design/2aHqGEWnE9IcglMGJdlXE1/Design-Research-T8?node-id=48-75&t=3BWEJstoLPmIRZ5R-1]
 - Trello: [https://trello.com/invite/b/69aebfa819fd18a3f0b740d4/ATTIbc1584ccdf63dceb014945770b4709c7662D9F25/dollerups-disciple]
 
@@ -28,9 +28,8 @@ Projektet er opdelt i HTML, CSS og JavaScript-filer.
 ```
 Alimento/
 ├── index.html
-├── grocerylist.html.html
+├── grocerylist.html
 ├── productdetails.html
-├── form.html
 ├── CSS/
 │   ├── index.css
 │   ├── productlist.css
@@ -39,17 +38,17 @@ Alimento/
 ├── js/
 │   ├── grocerylist.js
 │   ├── productdetails.js
-│   └── form.js
 └── README.md
 ```
 
 ### Filbeskrivelser
 
 - **index.html** – forsiden
-- **recipelist.html** – viser en liste med data fra API'et
-- **recipedetails.html** – viser detaljer om en valgt opskrift
-- **form.html** – indeholder formularen
-- **style.css** – styrer designet
+- **grocerylist.html** – viser en liste med data fra API'et, samt formularen
+- **productdetails.html** – viser detaljer om et valgt produkt
+- **index.css** – styrer designet for index.html
+- **productlist.css** Styrer designet for grocerylist.html
+- **productdetails.css** Styrer designet for productdetails.html
 - **JavaScript-filer** – styrer det dynamiske indhold på de forskellige sider
 
 ---
@@ -60,26 +59,23 @@ Vi har opdelt JavaScript, så hver side har sin egen fil.
 
 ### grocerylist.js
 
-Bruges til listevisning, til at liste produkterne fra dataen op
+Denne fil henter alle produkterne fra API'et og indsætter dem i listen.
 
 ### productdetails.js
 
-Bruges til at vise uddybbende data og billede om det specifikke produkt, der er klikket på-
+Denne fil bruges til at vise det specifikke produkt, som brugeren har klikket på.
 
 **Flow:**
 
-1. Siden loader
-2. JavaScript kører
-3. Data hentes fra Rest API
-4. Data bliver gennemgået med loop
-5. HTML bliver indsat i DOM'en
-6. Brugeren kan klikke på et produkt
+1. Siden indlæses.
 
-### form.js
+2. JavaScriptet udlæser produktets unikke ID fra URL'en ved hjælp af URLSearchParams.
 
-Styrer formularen og validering af inputfelter.
+3. Der laves et specifikt fetch-kald til API'et med dette ID.
 
-Denne fil bruges til at sikre, at brugeren udfylder formularen korrekt. Det gør formularen mere brugervenlig og mindsker fejl.
+4. Produktets detaljer (pris, beskrivelse, billede osv.) indsættes dynamisk i DOM'en.
+
+5. Brugeren præsenteres for den uddybende produktinformation.
 
 ---
 
@@ -93,15 +89,12 @@ Eksempler på variabler
 ```javascript
 const productId;
 const container;
-const product;
 ```
 
 ### Eksempler på funktioner
 
 ```javascript
-showDetails();    /
-product.tags.join();
-
+showData();
 ```
 
 Vi har brugt camelCase i JavaScript, fordi det gør koden mere ensartet og lettere at læse.
@@ -116,16 +109,11 @@ Fx ved funktioner, fetch-kald og steder hvor der sker DOM-manipulation.
 **Eksempel:**
 
 ```javascript
-// Vi henter data fra kategorien groceries
-fetch("https://dummyjson.com/products/category/groceries?limit=24")
-  .then((res) => res.json())
-  .then((data) => {
-    // Vi sender listen af produkter videre til showData funktionen
-    showData(data.products);
-  });
+// --- 1. FIND BEHOLDERE ---
+const container = document.querySelector(".cards");
+const priceSort = document.querySelector("#price-sort"); // Finder dropdown
+const filterButtons = document.querySelectorAll(".filter-btn"); // Finder knapper
 ```
-
-Vi har prøvet ikke at skrive kommentarer til helt åbenlyse ting, men kun dér hvor det hjælper forståelsen.
 
 ---
 
@@ -201,9 +189,9 @@ Vi henter data fra et API i JSON-format.
 ### Felter vi bruger
 
 - **id** – bruges til at sende brugeren videre til detaljesiden
-- **title** – opskriftsnavn
-- **tags** – Sætter en katefori ind (feks meat eller friut)
-- **descriptione** – En beskrivelse af produktet
+- **title** – Produktnavn
+- **tags** – Sætter en kategori ind (feks meat eller fruit)
+- **description** – En beskrivelse af produktet
 - **price** – Produktets pris
 
 ---
@@ -216,7 +204,6 @@ Vi har lavet en formular, hvor brugeren kan indtaste oplysninger.
 
 - `required` – feltet skal udfyldes
 - `type="email"` – validerer email-format
-- `type="number"` – accepterer kun tal
 
 Det sikrer, at brugeren ikke kan sende formularen, hvis felterne ikke er udfyldt korrekt.
 
@@ -262,12 +249,10 @@ Vi har tænkt bæredygtighed ind i projektet.
 ## Udfordringer undervejs
 
 En af vores udfordringer var at få data fra Rest API’et vist korrekt på siderne.
-Det var også lidt svært at få id med videre i URL’en til detaljesiden.
 
 **Løsninger:**
 
 - Console.logge data undervejs
-- Teste fetch-kald separat
 - Bruge URLSearchParams
 - Dele opgaverne mere tydeligt i gruppen
 
