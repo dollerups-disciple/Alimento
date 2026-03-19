@@ -35,7 +35,7 @@ Alimento/
 │   ├── productlist.css
 │   ├── productdetails.css
 │   └──
-├── js/
+├── js-2/
 │   ├── grocerylist.js
 │   ├── productdetails.js
 └── README.md
@@ -51,7 +51,7 @@ Alimento/
 - **productdetails.css** Styrer designet for productdetails.html
 - **JavaScript-filer** – styrer det dynamiske indhold på de forskellige sider
 
----
+## Vi blev nød til at oprette ny JS mappe (js-2) i sidste øjeblik, da der var problemer for github med at læse den oprindelige mappe.
 
 ## Hvordan koden fungerer
 
