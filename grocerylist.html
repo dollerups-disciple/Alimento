@@ -25,11 +25,6 @@
           </svg>
         </div>
 
-        <nav class="menu">
-          <a href="veggie.html">Veggie</a>
-          <a href="french.html">French</a>
-          <a href="asian.html">Asian</a>
-        </nav>
 
         <div class="icon">⌕</div>
       </header>
@@ -45,132 +40,84 @@
 
       <section>
         <h3>Choose Your Food</h3>
-        <div class="cards">
-          <a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a>
-          <a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a>
-          <a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a>
-          <a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-          </a><a href="productdetails.html">
-            <article class="card">
-              <img src="" alt="" />
-              <p></p>
-            </article>
-        </div>
+
+        <section
+          class="controls"
+          style="margin-bottom: 20px; display: flex; gap: 20px; flex-wrap: wrap"
+        >
+          <div class="filter-group">
+            <button class="filter-btn" data-category="all">Show All</button>
+            <button class="filter-btn" data-category="fruits">Fruits</button>
+            <button class="filter-btn" data-category="meat">Meat</button>
+          </div>
+
+          <div class="sort-group">
+            <select id="price-sort">
+              <option value="default">Sort by price</option>
+              <option value="low">Price: Low to High</option>
+              <option value="high">Price: High to Low</option>
+            </select>
+          </div>
+        </section>
+
+       
+</section>
+
+        <div class="cards"></div>
       </section>
+
+       <section class="suggestion-section">
+  <h3>Didn't Find What You Were Looking For?</h3>
+  <p>Help us improve Alimento by suggesting a new product.</p>
+
+<form id="product-suggestion" action="thanks.html" method="GET">
+  
+  <div class="form-group">
+    <label for="user-name">Your Name:</label>
+    <input 
+      type="text" 
+      id="user-name" 
+      name="fullname" 
+      required 
+      minlength="2" 
+      placeholder="Type in your name"
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="user-email">Email:</label>
+    <input 
+      type="email" 
+      id="user-email" 
+      name="email" 
+      required 
+      placeholder="your@email.com"
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="product-name">Produktforslag:</label>
+    <input 
+      type="text" 
+      id="product-name" 
+      name="item" 
+      required 
+      placeholder="For example, fresh figs"
+    >
+  </div>
+
+  <div class="form-group">
+    <label for="category">Category:</label>
+    <select id="category" name="category" required>
+      <option value="">Select a category...</option> <option value="fruits">Fruits & vegetables</option>
+      <option value="meat">Meat & fish</option>
+      <option value="snacks">Snacks</option>
+      <option value="nonfood">Drinks</option>
+    </select>
+  </div>
+
+  <button type="submit" class="submit-btn">Send suggestion</button>
+</form>
     </main>
   </body>
 </html>
