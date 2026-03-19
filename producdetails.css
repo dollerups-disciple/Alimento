@@ -11,7 +11,7 @@
 
 body {
   background: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .app {
@@ -83,7 +83,7 @@ body {
 }
 .hero h1 a {
   text-decoration: none; /* Fjerner understregningen */
-  color: inherit; /* Arver den sorte farve fra h1 (eller hvad du har sat) */
+  color: inherit; /* Arver den sorte farve fra h1 */
 }
 
 .hero h1 {
@@ -94,7 +94,7 @@ body {
 }
 
 .hero h2 {
-  font-family: "Great Vibes", cursive;
+  font-family: "Inter", sans-serif;
   font-size: 28px; /* Passer til mobilen */
   margin: 10px 0 20px;
   text-align: center;
@@ -141,7 +141,7 @@ body {
   border: none;
   padding: 16px;
   border-radius: 4px; /* Eller 30px hvis du vil have den rund */
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 1px;
