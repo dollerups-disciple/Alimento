@@ -6,7 +6,7 @@
 
 body {
   background: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .app {
@@ -78,7 +78,7 @@ body {
 }
 
 .hero h2 {
-  font-family: "Great Vibes", cursive;
+  ffont-family: "Inter", sans-serif;
   font-size: 56px;
   font-weight: 400;
   margin: -10px 0 20px;
