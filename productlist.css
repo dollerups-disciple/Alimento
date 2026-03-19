@@ -38,7 +38,7 @@
 
 body {
   background: #fff;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 
 .app {
@@ -116,7 +116,7 @@ body {
 }
 
 .hero h2 {
-  font-family: "Great Vibes", cursive;
+  font-family: "Inter", sans-serif;
   font-size: 56px;
   font-weight: 400;
   margin: -10px 0 20px;
@@ -156,7 +156,7 @@ h3 span {
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   font-weight: 700;
   transition: all 0.2s ease;
 }
@@ -173,7 +173,7 @@ h3 span {
   padding: 10px;
   border-radius: 5px;
   border: 1px solid #ccc;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Inter", sans-serif;
   cursor: pointer;
 }
 
@@ -182,7 +182,7 @@ h3 span {
   padding: 20px;
   background: #f0f0f0;
   text-align: center;
-  font-family: sans-serif; /* Eller jeres Montserrat */
+  font-family: "Inter", sans-serif;
 }
 
 .suggestion-box p {
